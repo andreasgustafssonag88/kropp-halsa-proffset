@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kropp & Hälsa-Proffset</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}body{background:#f4f7fb;padding:20px}.container{max-width:900px;margin:auto}.card{background:white;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);margin-bottom:20px}h1{color:#2c3e50;margin-bottom:10px}button{background:#3498db;color:white;border:none;padding:12px 18px;border-radius:10px;cursor:pointer;margin:5px}button:hover{background:#2980b9}.answerBtn{display:block;width:100%;text-align:left;margin-bottom:10px}textarea,input{width:100%;padding:10px}.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="container"><div class="card"><h1>🧠 Kropp & Hälsa-Proffset</h1><p>XP: <span id="xp">0</span></p><p>Nivå: <span id="level">1</span></p><button onclick="startQuiz()">Träna frågor</button><button onclick="startMatching()">Para ihop</button><button onclick="startWritten()">Egna svar</button><button onclick="startExam()">Provläge</button></div><div id="gameArea"></div></div>
+<script>
+let xp=Number(localStorage.getItem('xp')||0);function updateXP(){xp=Number(xp);document.getElementById('xp').textContent=xp;document.getElementById('level').textContent=Math.floor(xp/100)+1;localStorage.setItem('xp',xp)}updateXP();
+const multipleChoiceQuestions=[{question:'Vad är puberteten?',answers:['En sjukdom','En period då kroppen utvecklas från barn till vuxen','Ett hormon','En muskel'],correct:1},{question:'Vad är hormoner?',answers:['Signalämnen i kroppen','Muskler','Blodkroppar','Skelettdelar'],correct:0},{question:'Vad betyder samtycke?',answers:['Alla vill vara med frivilligt','Att någon är tyst','Att någon övertalas','Att andra bestämmer'],correct:0},{question:'Vad är nikotin?',answers:['Vitamin','Beroendeframkallande ämne','Protein','Hormon'],correct:1}];
+const matchingQuestions=[['Pubertet','Kroppen utvecklas från barn till vuxen'],['Hormoner','Signalämnen i kroppen'],['Nikotin','Beroendeframkallande ämne']];
+const writtenQuestions=[{question:'Vad är puberteten?',keywords:['barn','vuxen','utvecklas']},{question:'Vad betyder samtycke?',keywords:['frivilligt','press']}];
+function startQuiz(){let i=0,s=0;function show(){if(i>=multipleChoiceQuestions.length){xp+=s*10;updateXP();document.getElementById('gameArea').innerHTML='<div class=card><h2>Klart!</h2><p>'+s+'/'+multipleChoiceQuestions.length+'</p></div>';return;}let q=multipleChoiceQuestions[i];let h='<div class=card><h2>'+q.question+'</h2>';q.answers.forEach((a,n)=>h+='<button class=answerBtn onclick="ans('+n+')">'+a+'</button>');h+='</div>';document.getElementById('gameArea').innerHTML=h;window.ans=function(n){if(n===q.correct)s++;i++;show();}}show();}
+function startMatching(){let h='<div class=card><h2>Para ihop</h2>';matchingQuestions.forEach(q=>h+='<p><b>'+q[0]+'</b><input id="'+q[0]+'"></p>');h+='<button onclick="checkMatching()">Rätta</button></div>';document.getElementById('gameArea').innerHTML=h;}
+function checkMatching(){let s=0;matchingQuestions.forEach(q=>{let v=document.getElementById(q[0]).value.toLowerCase();if(v.includes(q[1].split(' ')[0].toLowerCase()))s++;});document.getElementById('gameArea').innerHTML='<div class=card><h2>Resultat</h2><p>'+s+'/'+matchingQuestions.length+'</p></div>';}
+function startWritten(){let q=writtenQuestions[Math.floor(Math.random()*writtenQuestions.length)];document.getElementById('gameArea').innerHTML='<div class=card><p>'+q.question+'</p><textarea id="w"></textarea><button onclick="cw()">Rätta</button></div>';window.cw=function(){let t=document.getElementById('w').value.toLowerCase();let f=0;q.keywords.forEach(k=>{if(t.includes(k))f++;});document.getElementById('gameArea').innerHTML='<div class=card><p>'+f+'/'+q.keywords.length+' nyckelord</p></div>';}}
+function startExam(){startQuiz();}
+</script></body></html>
