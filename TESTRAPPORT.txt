@@ -1,36 +1,20 @@
-KROPP & HÄLSA-PROFFSET V2.2 - TESTRAPPORT
+KROPP & HÄLSA-PROFFSET V2.3 - TESTRAPPORT
 
-Godkända tester: 32/32
+Godkända tester: 16/16
 
-[OK] Frågebank: flerval - 56 frågor
-[OK] Frågebank: para ihop - 22 par
-[OK] Frågebank: egna svar - 16 frågor
-[OK] Alla flervalsfrågor har fyra alternativ
-[OK] Alla rättsvar pekar på giltigt alternativ
-[OK] Alla flervalsfrågor har förklaring
-[OK] Unika flervalsfrågor
-[OK] Para ihop har unika begrepp
-[OK] Egna svar har obligatoriska nyckelord
-[OK] Funktion: showQuizMenu
-[OK] Funktion: runQuiz
-[OK] Funktion: trainMistakes
-[OK] Funktion: startMatching
-[OK] Funktion: startWritten
-[OK] Funktion: startExam
-[OK] Funktion: showStats
-[OK] Funktion: resetAll
-[OK] Självskattning: tre nivåer
-[OK] Självskattning sparas
-[OK] Para ihop: fel avmarkeras
-[OK] Para ihop: ny uppsättning
-[OK] Mobil brytpunkt 600 px
-[OK] Mobil: matchning enkel kolumn
-[OK] Lokal sparning
-[OK] Återställning
-[OK] Viewport för mobil
-[OK] HTML-element: html
-[OK] HTML-element: head
-[OK] HTML-element: body
-[OK] HTML-element: main
-[OK] HTML-element: script
-[OK] HTML-element: style
+[OK] speechSynthesis
+[OK] SpeechSynthesisUtterance
+[OK] speakCurrent
+[OK] stopSpeech
+[OK] showSpeechSettings
+[OK] scheduleAutoRead
+[OK] sv-SE
+[OK] Läs frågan
+[OK] Läs fråga och svar
+[OK] Långsammare
+[OK] Snabbare
+[OK] Automatisk uppläsning
+[OK] Tidigare statistik bevaras
+[OK] Svensk röst prioriteras
+[OK] Ingen extern tjänst krävs
+[OK] Mobilinställningar en kolumn
