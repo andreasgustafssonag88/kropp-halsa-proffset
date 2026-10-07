@@ -1,13 +1,11 @@
-# Kropp & Hälsa-Proffset v2.1
+# Kropp & Hälsa-Proffset v2.2
 
-## Nyheter
-- 10 frågor per träningsomgång
-- Balanserat provläge
-- Resultat per område
-- Träna på tidigare fel
-- Senaste och bästa provresultat
-- Historik och statistik per område
-- Återställning av lokal sparning
+## Nytt i version 2.2
+- Förbättrat para ihop-läge med tydliga val, omedelbar återkoppling, låsta rätta par och ny slumpad omgång
+- Förbättrat läge för egna svar med nyckelord, exempelsvar och självskattning
+- Självskattning sparas i elevens lokala statistik
+- Mobilanpassning för matchning, knappar och självskattning
+- Funktionstest av frågebank, JavaScript, HTML-struktur, lokal sparning och ZIP-paket
 
 ## Publicera
-Ersätt den tidigare `index.html` i GitHub-repositoryt och gör en commit till `main`. GitHub Pages uppdateras automatiskt.
+Ersätt `index.html` i GitHub-repositoryt och gör en commit till `main`.
