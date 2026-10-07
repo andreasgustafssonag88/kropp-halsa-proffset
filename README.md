@@ -1,12 +1,13 @@
-# Kropp & Hälsa-Proffset v2.6
+# Kropp & Hälsa-Proffset v2.7
 
-## Nytt i version 2.6
-- Varje enskilt flervalssvar kan läsas upp i träning och provläge.
-- Varje enskilt begrepp och varje förklaring i Para ihop kan läsas upp separat.
-- I provets para ihop-del kan det valda svarsalternativet läsas upp separat.
-- Exempelsvar och rätta svar på resultatsidor kan läsas upp separat.
-- Uppläsningen säger inte längre "Alternativ A", "Alternativ B" och så vidare. Den läser endast själva svarstexten.
-- Funktionen `Läs fråga och svar` läser frågan och svarstexterna utan bokstavsprefix.
+## Nytt
+- Påbörjade flervalsomgångar, skrivomgångar och prov sparas automatiskt.
+- Fortsätt eller börja om från startsidan.
+- Varning innan eleven lämnar ett pågående prov.
+- Träning från elevens svagaste områden.
+- Förbättrad, försiktig återkoppling på egna svar med innehållstäckning, samband och exempel.
+- Tangenterna 1–4 väljer svar, mellanslag läser frågan och Escape stoppar uppläsningen.
+- Knapp för större text.
 
 ## Publicera
 Ersätt `index.html` i GitHub-repositoryt och gör en commit till `main`.
