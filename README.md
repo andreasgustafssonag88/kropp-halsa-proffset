@@ -1,12 +1,12 @@
-# Kropp & Hälsa-Proffset v2.5
+# Kropp & Hälsa-Proffset v2.6
 
-## Nytt i version 2.5
-- Uppläsningsinställningar öppnas som en dialogruta ovanpå aktuell fråga.
-- `Stäng` och `Spara och fortsätt` återgår direkt till samma fråga utan att elevens arbete försvinner.
-- Dialogrutan kan även stängas genom klick utanför rutan eller med Escape.
-- Varje flervalssvar har en egen högtalarknapp.
-- Eleven kan få alternativ A, B, C eller D uppläst utan att svaret väljs.
-- Enskild uppläsning fungerar i både träningsläge och provläge.
+## Nytt i version 2.6
+- Varje enskilt flervalssvar kan läsas upp i träning och provläge.
+- Varje enskilt begrepp och varje förklaring i Para ihop kan läsas upp separat.
+- I provets para ihop-del kan det valda svarsalternativet läsas upp separat.
+- Exempelsvar och rätta svar på resultatsidor kan läsas upp separat.
+- Uppläsningen säger inte längre "Alternativ A", "Alternativ B" och så vidare. Den läser endast själva svarstexten.
+- Funktionen `Läs fråga och svar` läser frågan och svarstexterna utan bokstavsprefix.
 
 ## Publicera
 Ersätt `index.html` i GitHub-repositoryt och gör en commit till `main`.
